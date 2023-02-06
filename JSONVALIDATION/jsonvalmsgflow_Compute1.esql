@@ -1,0 +1,10 @@
+
+
+CREATE COMPUTE MODULE jsonvalmsgflow_Compute1
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		DECLARE A REFERENCE TO InputExceptionList;	
+		SET Environment.var.B =  A;
+		RETURN TRUE;
+	END;
+END MODULE;
