@@ -1,0 +1,9 @@
+
+
+CREATE COMPUTE MODULE Loopback_Cloudant_Compute
+	CREATE FUNCTION Main() RETURNS BOOLEAN
+	BEGIN
+		SET OutputLocalEnvironment.Destination.Loopback.Request.id = InputRoot.JSON.Data.id;
+		RETURN TRUE;
+	END;
+END MODULE;
