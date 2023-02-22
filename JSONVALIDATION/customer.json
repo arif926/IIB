@@ -1,0 +1,35 @@
+  {
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "CustDetails": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "values": "Arif"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "ac": {
+          "type": "integer"
+        },
+        "city": {
+          "type": "string",
+          "minLength" :10,
+          "maxLength":12
+        }
+      },
+      "required": [
+        "name",
+        "id",
+        "ac",
+        "city"
+      ]
+    }
+  },
+  "required": [
+    "CustDetails"
+  ]
+}

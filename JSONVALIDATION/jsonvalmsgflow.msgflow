@@ -6,19 +6,19 @@
     <colorGraphic16 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/JSONVALIDATION/icons/full/obj16/jsonvalmsgflow.gif"/>
     <colorGraphic32 xmi:type="utility:GIFFileGraphic" resourceName="platform:/plugin/JSONVALIDATION/icons/full/obj30/jsonvalmsgflow.gif"/>
     <composition>
-      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="41,85" URLSpecifier="/jsonvalidation" messageDomainProperty="JSON" messageSetProperty="customer.json">
+      <nodes xmi:type="ComIbmWSInput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_1" location="41,85" URLSpecifier="/jsonvalidation" messageDomainProperty="JSON" messageSetProperty="customer.json" validateMaster="contentAndValue">
         <translation xmi:type="utility:ConstantString" string="HTTP Input"/>
       </nodes>
       <nodes xmi:type="ComIbmWSReply.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="687,103">
         <translation xmi:type="utility:ConstantString" string="HTTP Reply"/>
       </nodes>
-      <nodes xmi:type="ComIbmValidate.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="245,56" domain="JSON" checkDomain="true" set="customer.json" checkSet="true" checkType="true" validateMaster="contentAndValue">
+      <nodes xmi:type="ComIbmValidate.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="285,38" domain="JSON" checkDomain="true" set="customer.json" checkSet="true" checkType="true" validateMaster="contentAndValue">
         <translation xmi:type="utility:ConstantString" string="Validate"/>
       </nodes>
       <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_5" location="483,59" computeExpression="esql://routine/#jsonvalmsgflow_Compute.Main">
         <translation xmi:type="utility:ConstantString" string="Compute"/>
       </nodes>
-      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="259,159" computeExpression="esql://routine/#jsonvalmsgflow_Compute1.Main" computeMode="all">
+      <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="341,151" computeExpression="esql://routine/#jsonvalmsgflow_Compute1.Main" computeMode="all">
         <translation xmi:type="utility:ConstantString" string="Compute1"/>
       </nodes>
       <connections xmi:type="eflow:FCMConnection" xmi:id="FCMConnection_2" targetNode="FCMComposite_1_5" sourceNode="FCMComposite_1_4" sourceTerminalName="OutTerminal.match" targetTerminalName="InTerminal.in"/>
